@@ -1,10 +1,11 @@
 # NetCDF to GeoTIFF
 
-[![Launch the converter](https://img.shields.io/badge/Launch-public_converter-006B77?style=for-the-badge)](https://aqsa-netcdf-to-geotiff.aqsa-35.chatgpt.site)
+[![Launch the converter](https://img.shields.io/badge/Launch-public_converter-006B77?style=for-the-badge)](https://aqsabrohi.me/NetCDFtoTiff_Tool/)
+[![GitHub Pages](https://github.com/Aqsa48/NetCDFtoTiff_Tool/actions/workflows/pages.yml/badge.svg)](https://github.com/Aqsa48/NetCDFtoTiff_Tool/actions/workflows/pages.yml)
 [![Project checks](https://github.com/Aqsa48/NetCDFtoTiff_Tool/actions/workflows/checks.yml/badge.svg)](https://github.com/Aqsa48/NetCDFtoTiff_Tool/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**[Live application](https://aqsa-netcdf-to-geotiff.aqsa-35.chatgpt.site)** · **[GitHub repository](https://github.com/Aqsa48/NetCDFtoTiff_Tool)**
+**[Live application](https://aqsabrohi.me/NetCDFtoTiff_Tool/)** · **[GitHub repository](https://github.com/Aqsa48/NetCDFtoTiff_Tool)**
 
 [Browser guide](#browser-tool) · [Python setup](#python-tool) · [Supported grids](#supported-geography) · [Troubleshooting](#troubleshooting) · [Contribute](#development)
 
@@ -12,7 +13,7 @@
 
 | I want to… | Start here |
 | --- | --- |
-| Try the tool without installing anything | [Open the converter](https://aqsa-netcdf-to-geotiff.aqsa-35.chatgpt.site), then click **Try a synthetic example** |
+| Try the tool without installing anything | [Open the converter](https://aqsabrohi.me/NetCDFtoTiff_Tool/), then click **Try a synthetic example** |
 | Convert a small NetCDF3 file | [Browser workflow](#browser-tool) |
 | Convert NetCDF4/HDF5 or a larger file | [Install the Python tool](#python-tool) |
 | Inspect a known input first | [Download the synthetic NetCDF fixture](https://raw.githubusercontent.com/Aqsa48/NetCDFtoTiff_Tool/main/web/sample.nc) |
@@ -24,14 +25,14 @@ GitHub provides the expandable guides below. The file picker, preview, and conve
 
 Convert a regular latitude-longitude scientific grid into a north-up GeoTIFF for QGIS and other GIS tools. Use the public browser tool for small NetCDF3 files, or install the Python package for NetCDF4, gzip, and larger datasets.
 
-**[Open the public converter](https://aqsa-netcdf-to-geotiff.aqsa-35.chatgpt.site)** · [Report a bug](https://github.com/Aqsa48/NetCDFtoTiff_Tool/issues) · [Contribute](CONTRIBUTING.md)
+**[Open the public converter](https://aqsabrohi.me/NetCDFtoTiff_Tool/)** · [Report a bug](https://github.com/Aqsa48/NetCDFtoTiff_Tool/issues) · [Contribute](CONTRIBUTING.md)
 
 ## Browser tool
 
 <details open>
 <summary><strong>Try the public converter in five steps</strong></summary>
 
-1. [Launch the application](https://aqsa-netcdf-to-geotiff.aqsa-35.chatgpt.site).
+1. [Launch the application](https://aqsabrohi.me/NetCDFtoTiff_Tool/).
 2. Click **Try a synthetic example**, or choose a local `.nc` / `.nc.gz` file.
 3. Select the variable, latitude and longitude coordinates, and each extra dimension index.
 4. Confirm WGS84 degrees, then click **Create GeoTIFF**.
@@ -214,6 +215,10 @@ nc2tiff input.nc output.tif --variable rain --overwrite
 [Open a bug report](https://github.com/Aqsa48/NetCDFtoTiff_Tool/issues/new?template=bug_report.yml). Include your environment, steps, expected behavior, and a small public or synthetic example. Remove credentials and restricted research data.
 
 </details>
+
+## GitHub Pages deployment
+
+The [public converter](https://aqsabrohi.me/NetCDFtoTiff_Tool/) is hosted on GitHub Pages and deployed by [GitHub Actions](https://github.com/Aqsa48/NetCDFtoTiff_Tool/actions/workflows/pages.yml). Changes to the app on `main` publish automatically after the conversion checks pass. See [deployment instructions](DEPLOYMENT.md) for setup, manual publishing, and troubleshooting.
 
 ## Development
 

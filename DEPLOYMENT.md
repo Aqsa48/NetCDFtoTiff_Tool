@@ -17,7 +17,7 @@ Push changes to `web/`, the Python converter, its tests, or the deployment workf
 
 Documentation-only changes do not redeploy the website. To publish manually, open **Actions → Deploy GitHub Pages → Run workflow**, select `main`, and run it. GitHub shows the published URL in the deployment job and environment.
 
-The expected project address is https://aqsa48.github.io/NetCDFtoTiff_Tool/. All browser asset URLs are relative so the app works under the repository's path.
+The live project address is https://aqsabrohi.me/NetCDFtoTiff_Tool/. The account's existing `Aqsa48.github.io` repository configures `aqsabrohi.me` as its custom domain, so https://aqsa48.github.io/NetCDFtoTiff_Tool/ redirects to that domain. This website is served by GitHub Pages and deployed by GitHub Actions. Use the HTTPS custom-domain link directly. All browser asset URLs are relative so the app works under the repository's path.
 
 ## Check the live demo
 
