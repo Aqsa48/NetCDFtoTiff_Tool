@@ -1,0 +1,14 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {readNetCDF,convertGrid,writeGeoTIFF} from './core.mjs';
+const b=readFileSync(new URL('./sample.nc',import.meta.url));
+const reader=readNetCDF(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));
+assert.throws(()=>convertGrid(reader,'temperature','lat','lon'),/Select an index/);
+const g=convertGrid(reader,'temperature','lat','lon',{time:0});
+assert.deepEqual(Array.from(g.values),[20,NaN,22,10,11,12]);
+assert.equal(g.west,6.5);assert.equal(g.north,46.5);
+assert.throws(()=>readNetCDF(new Uint8Array([137,72,68,70]).buffer),/NetCDF4/);
+writeFileSync(new URL('./test-output.tif',import.meta.url),new Uint8Array(writeGeoTIFF(g)));
+const second=convertGrid(reader,'temperature','lat','lon',{time:1});
+assert.deepEqual(Array.from(second.values),[23,24,25,13,14,15]);
+console.log('Browser conversion: values, orientation, slice validation and format rejection passed.');

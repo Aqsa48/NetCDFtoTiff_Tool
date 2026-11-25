@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aqsa-netcdf-to-tiff"
+version = "0.1.0"
+description = "Convert regular latitude-longitude NetCDF grids to verified GeoTIFFs"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "xarray>=2024.1,<2027", "rasterio>=1.3,<2", "scipy>=1.11,<2", "h5netcdf>=1.3,<2", "h5py>=3.10,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+nc2tiff = "nc2tiff.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
